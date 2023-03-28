@@ -235,3 +235,9 @@ input:checked ~ .bubble::after {
 	text-decoration: line-through;
 	color: var(--grey);
 }
+
+a {
+	color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
