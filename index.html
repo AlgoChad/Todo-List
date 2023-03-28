@@ -1,74 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List App</title>
+    <title>Greeting Example</title>
+    <style>
+        
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'montserrat', sans-serif;
+        }
+        
+        body {
+        background: var(--light);
+        color: var(--dark);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        }
+        
+        .greeting {
+        text-align: center;
+        }
+        
+        .title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        }
+        .greeting .title {
+            display: flex;
+        }
+        
+        .greeting .title input {
+            margin-left: 0.5rem;
+            flex: 1 1 0%;
+            min-width: 0;
+        }
+
+        .greeting .title, 
+        .greeting .title input {
+            color: var(--dark);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        #submit-btn {
+            display: block;
+	width: 100%;
+	font-size: 1.125rem;
+	padding: 1rem 1.5rem;
+	color: #FFF;
+	font-weight: 700;
+	text-transform: uppercase;
+	background-color: var(--primary);
+	box-shadow: var(--personal-glow);
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: 0.2s ease-out;
+        }
+        
+        #submit-btn:hover {
+            opacity: 0.75;
+        }
+
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <main class="app">
-        <secttion class="greeting">
-            <h2 class="title">
-                What's up, <input type="text" id="name" placeholder="Name Here">
-            </h2>
-        </secttion>
-        <section class="create-todo">
-            <h3>Create a To Do</h3>
-            <form id="new-todo-form">
-                <h4>What's on your todo list?</h4>
-                <input 
-                    type="text" 
-                    name="contet" 
-                    id="content" 
-                    placeholder="e.g. Workout for 1hr"/>
-                <h4>Pick a Category</h4>
-                <div class="options">
-                    <label>
-                        <input 
-                            type="radio" 
-                            name="category" 
-                            id="category" 
-                            value="business"/>
-                        <span class="bubble business"></span>
-                        <div>Business</div>
-                    </label>
-                    <label>
-                        <input 
-                            type="radio" 
-                            name="category" 
-                            id="category2" 
-                            value="personal"/>
-                        <span class="bubble personal"></span>
-                        <div>Personal</div>
-                    </label>
-                </div>
-                <input type="submit" value="Add Todo"/>
-            </form>
-        </section>
-        <section class="todo-list">
-            <h3>Todo List</h3>
-            <div class="todo-list" id="todo-list">
-                <!-- <div class="todo-item">
-                    <label>
-                        <input type="checkbox"/>
-                        <span class="bubble business"></span>
-                    </label>
-                    <div class="todo-content">
-                        <input type="text" value="Workout" readonly/>
-                    </div>
-                    <div class="actions">
-                        <button class="edit">Edit</button>
-                        <button class="delete">Delete</button>
-                    </div>
-                </div> -->
-            </div>
-        </section>
-    </main>
-    <script src="main.js"></script>
+  <section class="greeting">
+    <h2 class="title">
+      What's up, <input type="text" id="username-input" placeholder="Name Here">
+    </h2>
+    <input type="submit" id="submit-btn" value="Go to App"/>
+  </section>
+  <script src="landing_page.js"></script>
 </body>
 </html>
