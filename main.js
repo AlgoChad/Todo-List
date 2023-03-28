@@ -32,6 +32,11 @@ window.addEventListener('load', () => {
     DisplayTodos();
 });
 
+const submitBtn = document.getElementById('submit-btn');
+submitBtn.addEventListener('click', function() {
+  window.location.href = 'todolist.html';
+});
+
 function DisplayTodos() {
     const todoList = document.querySelector('#todo-list');
     todoList.innerHTML = '';
